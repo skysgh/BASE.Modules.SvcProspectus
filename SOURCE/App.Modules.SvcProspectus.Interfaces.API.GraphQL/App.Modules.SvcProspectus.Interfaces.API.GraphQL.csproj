@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>$(AssemblyName)</Title>
+    <PackageReadmeFile>_Packaging/readme.nuget.md</PackageReadmeFile>
+            <!-- CA1716: Namespace conflicts with reserved keywords like 'Shared', 'Interface' -->
+    <NoWarn>$(NoWarn);CA1716</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\readme.md" Pack="True" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BASE.Modules.Sys\SOURCE\App.Modules.Sys.Application\App.Modules.Sys.Application.csproj" />
+    <ProjectReference Include="..\..\..\BASE.Modules.Sys\SOURCE\App.Modules.Sys.Interfaces.Models\App.Modules.Sys.Interfaces.Models.csproj" />
+    <ProjectReference Include="..\..\..\BASE.Modules.Sys\SOURCE\App.Modules.Sys.Substrate\App.Modules.Sys.Substrate.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.Models\App.Modules.SvcProspectus.Interfaces.Models.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Application\App.Modules.SvcProspectus.Application.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Shared\App.Modules.SvcProspectus.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="_Packaging\readme.nuget.md">
+      <PackagePath>\</PackagePath>
+      <Pack>true</Pack>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Domains\X\Configuration\" />
+  </ItemGroup>
+
+</Project>
