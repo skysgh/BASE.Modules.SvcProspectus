@@ -1,20 +1,56 @@
-# About #
+# BASE.Modules.SvcProspectus
 
-This is a repo template for creating BASE Modules.
+Service marketing and brochure content module.
 
-Key aspects to notice:
+## Purpose
 
-* Module and relevant file names contain a `KWMODULENAME` token for quick renaming using the provided `post-build.ps1` script.
-* Module is composed of multiple Assemblies, following DDD patterns, approximately as follows:
-  * `*.Interface.UI.Web` invokes APIs found in
-  * `*.Interface.API.GraphQL`, composed of thin Controllers wrapping
-  * `*.Interface.API.REST`, composed of thin Controllers wrapping
-  * `*.Interface.API.ODATA`, composed of thin Controllers wrapping
-  * `*.Interface.Models` and
-  * `*.Application` services that orchestrate calls between
-  * `*.Domain`
-  * `*.Infrastructure` and
-  * `*.Infrastructure.Data.EF` and
-  * `*.Substrate` referring to base contracts, etc.
+Prospectus provides the "About the Service" content:
+- **Features** - Service capabilities and benefits
+- **Team** - Team member profiles
+- **Timelines/Roadmap** - Release history and upcoming
+- **Pricing Overview** - Tier descriptions (not billing)
+- **Featured FAQs** - Curated from Supports (dynamic)
+- **Testimonials** - Customer quotes from Supports
+
+## Module Dependencies
+
+```
+Sys
+   ↓
+Messaging
+   ↓
+Membership
+   ↓
+Social
+   ↓
+Supports (source of FAQs, Testimonials)
+   ↓
+SvcProspectus ← YOU ARE HERE (display layer)
+```
+
+## References to Other Modules
+
+Prospectus consumes content from Supports:
+
+```xml
+<!-- In SvcProspectus.Application.csproj -->
+<ProjectReference Include="..\..\..\BASE.Modules.Supports\SOURCE\App.Modules.Supports.Shared\App.Modules.Supports.Shared.csproj" />
+<ProjectReference Include="..\..\..\BASE.Modules.Supports\SOURCE\App.Modules.Supports.Interfaces.Models\App.Modules.Supports.Interfaces.Models.csproj" />
+```
+
+## Key Insight
+
+**Prospectus is a VIEW into Supports, not a separate data store.**
+
+- FAQs live in Supports → Prospectus displays featured ones
+- Testimonials live in Supports → Prospectus displays approved ones
+- Usage stats determine relevance → stale content naturally fades
+
+## Key Entities
+
+- `Feature` - Service capability with description, icon
+- `TeamMember` - Profile for About page
+- `PricingTier` - Tier description (display only)
+- `RoadmapItem` - Timeline/release item
  
 
