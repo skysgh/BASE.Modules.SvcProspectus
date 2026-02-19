@@ -29,8 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domains\X\Configuration\" />
-    <Folder Include="Domains\X\Models\" />
+    <Folder Include="Domains\" />
   </ItemGroup>
 
 </Project>
