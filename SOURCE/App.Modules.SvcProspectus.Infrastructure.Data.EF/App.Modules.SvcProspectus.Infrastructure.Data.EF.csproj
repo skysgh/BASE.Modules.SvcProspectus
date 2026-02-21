@@ -10,7 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Shared\App.Modules.SvcProspectus.Shared.csproj" />
     <ProjectReference Include="..\App.Modules.SvcProspectus.Infrastructure\App.Modules.SvcProspectus.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\BASE.Modules.Sys\SOURCE\App.Modules.Sys.Infrastructure.Data.EF\App.Modules.Sys.Infrastructure.Data.EF.csproj" />
   </ItemGroup>
 
   <ItemGroup>
