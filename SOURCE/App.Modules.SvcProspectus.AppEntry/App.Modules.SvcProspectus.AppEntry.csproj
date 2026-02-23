@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Infrastructure\App.Modules.SvcProspectus.Infrastructure.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Infrastructure.Data.EF\App.Modules.SvcProspectus.Infrastructure.Data.EF.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.UI.Web\App.Modules.SvcProspectus.Interface.UI.Web.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.API.GraphQL\App.Modules.SvcProspectus.Interfaces.API.GraphQL.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.API.OData\App.Modules.SvcProspectus.Interfaces.API.OData.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.API.REST\App.Modules.SvcProspectus.Interfaces.API.REST.csproj" />
+    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.Models\App.Modules.SvcProspectus.Interfaces.Models.csproj" />
+  </ItemGroup>
+</Project>
