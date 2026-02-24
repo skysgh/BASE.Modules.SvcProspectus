@@ -1,0 +1,33 @@
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+end_of_line = crlf
+charset = utf-8-bom
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.cs]
+# VERBOSITY PREFERENCES (prefer explicit over terse)
+csharp_style_expression_bodied_methods = false:suggestion
+dotnet_diagnostic.IDE0022.severity = suggestion
+csharp_style_expression_bodied_properties = false:suggestion
+dotnet_diagnostic.IDE0025.severity = suggestion
+dotnet_style_collection_initializer = false:suggestion
+dotnet_diagnostic.IDE0028.severity = suggestion
+dotnet_diagnostic.IDE0031.severity = suggestion
+dotnet_style_prefer_auto_properties = false:suggestion
+dotnet_diagnostic.IDE0032.severity = suggestion
+csharp_style_prefer_range_operator = false:suggestion
+dotnet_diagnostic.IDE0057.severity = suggestion
+dotnet_diagnostic.IDE0076.severity = suggestion
+dotnet_diagnostic.IDE0130.severity = suggestion
+csharp_style_namespace_declarations = block_scoped:suggestion
+dotnet_diagnostic.IDE0160.severity = suggestion
+
+# IDE0200: Lambda expression can be removed - SUGGESTION ONLY
+dotnet_diagnostic.IDE0200.severity = suggestion
+# IDE0305: Collection initialization can be simplified - SUGGESTION ONLY
+dotnet_diagnostic.IDE0305.severity = suggestion

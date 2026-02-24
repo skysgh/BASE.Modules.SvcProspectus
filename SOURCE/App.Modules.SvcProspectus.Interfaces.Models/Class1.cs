@@ -1,10 +1,10 @@
-namespace App.Modules.SvcProspectus.Interfaces.Models
+﻿namespace App.Modules.SvcProspectus.Interfaces.Models
 {
-    /// <summary>
-    /// TODO: Document
-    /// </summary>
-    public class Class1
-    {
+	/// <summary>
+	/// TODO: Document
+	/// </summary>
+	public class Class1
+	{
 
-    }
+	}
 }

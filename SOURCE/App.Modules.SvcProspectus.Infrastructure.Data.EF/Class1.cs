@@ -1,7 +1,7 @@
-namespace App.Modules.SvcProspectus.Infrastructure.Data.EF
+﻿namespace App.Modules.SvcProspectus.Infrastructure.Data.EF
 {
-    public class Class1
-    {
+	public class Class1
+	{
 
-    }
+	}
 }
