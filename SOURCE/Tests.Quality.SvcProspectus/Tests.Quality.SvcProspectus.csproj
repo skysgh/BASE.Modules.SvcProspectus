@@ -1,49 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-	<TargetFramework>net10.0</TargetFramework>
-	<ImplicitUsings>enable</ImplicitUsings>
-	<Nullable>enable</Nullable>
-	<IsPackable>false</IsPackable>
-	<IsTestProject>true</IsTestProject>
-	<GenerateDocumentationFile>True</GenerateDocumentationFile>
-	<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-	<AnalysisLevel>preview-recommended</AnalysisLevel>
-	<NoWarn>IDE0290;IDE0060;IDE0046;IDE0066;IDE0063;IDE0057;IDE0028;IDE0071;IDE0075;IDE0029;IDE0008;IDE0130;CA1707;CS1591;NU1900;NU1901;NU1902;NU1903;NU1904;IDE0305;IDE0055</NoWarn>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	<WarningLevel>9999</WarningLevel>
-	<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	<WarningLevel>9999</WarningLevel>
-	<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-  </PropertyGroup>
-
   <ItemGroup>
-	<PackageReference Include="coverlet.collector" />
-	<PackageReference Include="Microsoft.NET.Test.Sdk" />
-	<PackageReference Include="xunit" />
-	<PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
   </ItemGroup>
-
-  <ItemGroup>
-	<Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Application\App.Modules.SvcProspectus.Application.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Domain\App.Modules.SvcProspectus.Domain.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Infrastructure\App.Modules.SvcProspectus.Infrastructure.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Infrastructure.Data.EF\App.Modules.SvcProspectus.Infrastructure.Data.EF.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.API.GraphQL\App.Modules.SvcProspectus.Interfaces.API.GraphQL.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.API.OData\App.Modules.SvcProspectus.Interfaces.API.OData.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.API.REST\App.Modules.SvcProspectus.Interfaces.API.REST.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.Models\App.Modules.SvcProspectus.Interfaces.Models.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Interfaces.UI.Web\App.Modules.SvcProspectus.Interface.UI.Web.csproj" />
-    <ProjectReference Include="..\App.Modules.SvcProspectus.Shared\App.Modules.SvcProspectus.Shared.csproj" />
-  </ItemGroup>
-
 </Project>

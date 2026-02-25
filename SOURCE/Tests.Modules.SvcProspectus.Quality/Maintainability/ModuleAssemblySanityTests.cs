@@ -1,6 +1,6 @@
-using Tests.Quality.SvcProspectus.Helpers;
+using Tests.Modules.SvcProspectus.Quality.Helpers;
 
-namespace Tests.Quality.SvcProspectus.Maintainability
+namespace Tests.Modules.SvcProspectus.Quality.Maintainability
 {
 	/// <summary>
 	/// ISO-25010 Maintainability.Modularity - Module Assembly Sanity.
